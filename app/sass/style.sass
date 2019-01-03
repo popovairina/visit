@@ -1,0 +1,28 @@
+@import 'vars'
+body
+	font-family: $light, sans-serif
+.container
+	width: 1140px
+	margin: 0 auto
+	padding-right: 15px
+	padding-left: 15px
+button, input, select
+	font-family: $light, sans-serif
+	font-size: 14px
+	outline: none
+	&:focus
+		outline: none
+*
+	box-sizing: border-box
+button
+	&:hover
+		cursor: pointer
+
+a
+	&:hover
+		text-decoration: none
+
+@import 'interface'
+@import 'header'
+@import 'footer'
+@import 'modals'

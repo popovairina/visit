@@ -1,0 +1,74 @@
+.overlay
+	position: fixed
+	display: none
+	top: 0
+	width: 100%
+	height: 100%
+	z-index: 5
+	background: rgba(0, 0, 0, .7)
+	.popup
+		position: fixed
+		left: 50%
+		top: 50%
+		transform: translate(-50%,-50%)
+		text-align: center
+		background-color: #fff
+		&-login
+			width: 300px
+		&-conf
+			width: 750px
+			max-height: 500px
+		&-close
+			position: absolute
+			right: -20px
+			top: -30px
+			font-size: 35px
+			color: #fff
+			z-index: 4
+			&:hover
+				cursor: pointer
+		&-title
+			min-height: 68px
+			padding-top: 23px
+			font-family: $medium
+			font-size: 21px
+			text-transform: uppercase
+			color: $active-color
+		&-body
+			padding-bottom: 30px
+			&-conf
+				max-height: 500px
+			&__input
+				display: block
+				padding: 5px
+				margin: 0 auto
+				margin-bottom: 15px
+				font-family: $light
+				font-size: 14px
+				border: 1px solid $active-color
+				border-radius: 5px
+				&::placeholder
+					color: $text-color-dark
+			&__button
+				padding: 10px
+				font-family: $light
+				font-size: 14px
+				color: #ffffff
+				background-color: $active-color
+				border-radius: 5px
+				border: none
+			&__text
+				padding-left: 15px
+				padding-right: 15px
+				text-align: left
+				&_small
+					margin-top: 8px
+					display: block
+.js-thank-you
+	&-body
+		padding: 20px
+		text-align: center
+		color: $active-color
+		font-size: 20px
+		font-family: $light
+			
