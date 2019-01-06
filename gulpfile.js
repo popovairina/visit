@@ -13,7 +13,7 @@ gulp.task('browser-sync', function() {
 		// server: {
 		// 	baseDir: 'app'
 		// },
-		proxy: "mortrans.loc",
+		proxy: "site.loc",
 		notify: false,
 		// open: false,
 		// tunnel: true,
@@ -46,7 +46,6 @@ gulp.task('js', function() {
 gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 	gulp.watch('app/'+syntax+'/**/*.'+syntax+'', ['styles']);
 	gulp.watch(['app/js/common.js'], ['js']);
-	gulp.watch('app/*.html', browsersync.reload);
 	gulp.watch('app/**/*.php', browsersync.reload)
 });
 

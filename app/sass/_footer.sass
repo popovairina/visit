@@ -1,0 +1,39 @@
+.footer
+	padding: 100px 0 50px
+	background-color: $bg
+	color: #ffffff
+	@media(max-width: #{$xl}px)
+		padding: 50px 0 30px
+	&__wrap
+		display: flex
+		justify-content: space-between
+		@media(max-width: #{$lg}px)
+			flex-wrap: wrap
+		@media(max-width: #{$md}px)
+			justify-content: center
+	&__col
+		margin-bottom: 50px
+		@media(max-width: #{$lg}px)
+			margin-bottom: 30px
+		@media(max-width: #{$md}px)
+			text-align: center
+	&__title
+		margin-bottom: 20px
+		font: 700 24px $ff
+		@media(max-width: #{$xl}px)
+			font-size: 17px
+	&__desc
+		max-width: 330px
+		font: 16px/1.6 $ff
+		@media(max-width: #{$xl}px)
+			font-size: 14px
+		&_bold
+			font-weight: 700
+		&_accent
+			font-size: 20px
+			color: lighten($accent,10)
+	&__policy
+		@media(max-width: #{$md}px)
+			max-width: 300px
+			margin: 0 auto
+			text-align: center

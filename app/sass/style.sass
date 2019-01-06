@@ -1,28 +1,49 @@
 @import 'vars'
 body
-	font-family: $light, sans-serif
+	position: relative
+	min-height: 100vh
+	margin: 0
+	padding: 0
+	min-width: 320px
+	font-size: 14px
+	font-family: $ff, sans-serif
 .container
 	width: 1140px
 	margin: 0 auto
-	padding-right: 15px
-	padding-left: 15px
+	padding-left: 10px
+	padding-right: 10px
+	@media(max-width: #{$xl}px)
+		max-width: 960px
+	@media(max-width: #{$lg}px)
+		max-width: 720px
+	@media(max-width: #{$md}px)
+		max-width: 540px
+	@media(max-width: #{$sm}px)
+		max-width: 100%
 button, input, select
-	font-family: $light, sans-serif
+	font-family: $ff, sans-serif
 	font-size: 14px
 	outline: none
 	&:focus
 		outline: none
 *
 	box-sizing: border-box
+h1, h2, h3
+	margin: 0
+	padding: 0
 button
 	&:hover
 		cursor: pointer
 
 a
+	color: #ffffff
+	text-decoration: none
 	&:hover
-		text-decoration: none
+		text-decoration: underline
 
 @import 'interface'
 @import 'header'
+@import 'fs'
+@import 'form'
 @import 'footer'
 @import 'modals'

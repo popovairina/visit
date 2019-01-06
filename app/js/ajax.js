@@ -2,9 +2,8 @@
 $(document).ready(function() {
 	$('form').on('submit', function(e) { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
 		e.preventDefault();
-		console.log(123);
 		var self = $(this);
-		if (self.find('select').val() == '') {
+		if (self.find('input').val() == '') {
 			valid = false;
 			return valid;
 		}
@@ -13,10 +12,9 @@ $(document).ready(function() {
 			url: "mailer/smart.php",
 			data: self.serialize()
 		}).done(function() {
-			$('.js-overlay-thank-you').fadeIn();
+            $('.form__wrap').hide();
+            $('.form__title').text('Спасибо за заявку! Ожидайте звонка.');
 			self.trigger('reset');
-			console.log(123);
-
 		});
 		return false;
 	});

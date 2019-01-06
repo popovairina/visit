@@ -1,8 +1,8 @@
 <?php 
 
-$from_city = $_POST['from_city'];
-$to_city = $_POST['to_city'];
-$date_book = $_POST['date_book'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['phone'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -30,11 +30,9 @@ $mail->isHTML(true);                                  // Set email format to HTM
 
 $mail->Subject = 'Новая заявка с сайта';
 $mail->Body    = '
-	Пользователь забронировал билет <br> 
-	Имя: неизвестно <br>
-	Откуда: ' . $from_city . ' <br>
-	Куда: ' . $to_city . ' <br>
-	Дата поездки: ' . $date_book . '';
+	Имя: ' . $name . ' <br>
+	Email: ' . $email . ' <br>
+	Телефон: ' . $phone . ' <br>';
 $mail->AltBody = 'Это альтернативный текст';
 
 if(!$mail->send()) {
